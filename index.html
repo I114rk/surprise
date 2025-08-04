@@ -45,6 +45,7 @@
   <button id="overlay" onclick="playSound()"></button>
 
   <div id="message">Чтобы получить сюрприз, нажми!</div>
+  <div id="message">Click for surprise!</div>
 
   <script>
     function playSound() {
@@ -52,7 +53,7 @@
       audio.play().then(() => {
         // Удаляем кнопку после воспроизведения
         document.getElementById("overlay").remove();
-        document.getElementById("message").innerText = "Сюрприз!";
+        document.getElementById("message").innerText = "Сюрприз! / Surprise!";
       }).catch((e) => {
         console.error("Не удалось воспроизвести звук:", e);
       });
